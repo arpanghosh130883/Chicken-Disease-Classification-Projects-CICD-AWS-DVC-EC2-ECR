@@ -137,26 +137,35 @@ open up you local host and port
 
 # AZURE-CICD-Deployment-with-Github-Actions
 
-## Save pass:
-
-s3cEZKH5yytiVnJ3h+eI3qhhzf9q1vNwEi6+q+WGdd+ACRCZ7JD6
-
-
-## Run from terminal:
-
-docker build -t chickenapp.azurecr.io/chicken:latest .
-
-docker login chickenapp.azurecr.io
-
-docker push chickenapp.azurecr.io/chicken:latest
-
-
 ## Deployment Steps:
 
 1. Build the Docker image of the Source Code
 2. Push the Docker image to Container Registry
 3. Launch the Web App Server in Azure 
 4. Pull the Docker image from the container registry to Web App server and run 
+
+## Save password: (This will be required when you use the docker login command as below from local terminal)
+
+s3cEZKH5yytiVnJ3h+eI3qhhzf9q1vNwEi6+q+WGdd+ACRCZ7JD6
+
+
+## Run from terminal:
+### create a conatiner in the container registry --> once created go to resources --> Access keys (note down the details)
+
+## Execute the below commands from local terminal of visual studio
+
+> docker build -t chickenapp.azurecr.io/chicken:latest .
+
+> docker login chickenapp.azurecr.io
+
+> docker push chickenapp.azurecr.io/chicken:latest
+
+## Create a WebApp in azure and select docker container as Docker container as Instance details
+
+## In order to include GitHub Actions as process of CI/CD we need to do below steps
+a.	Once the Azure Web App is created go to deployment centre --> enable the Continuous deployment
+b.	Select Source --> Github Action and select the respective repository
+
 
 ##Youtube Link:
 https://www.youtube.com/watch?v=p1bfK8ZJgkE
