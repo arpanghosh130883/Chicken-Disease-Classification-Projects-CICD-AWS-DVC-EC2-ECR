@@ -116,7 +116,8 @@ open up you local host and port
 	newgrp docker
 	
 # 6. Configure EC2 as self-hosted runner:
-    setting>actions>runner>new self hosted runner> choose os> then run command one by one
+    Github repo setting>actions>runner>new self hosted runner> choose os> then run command one by one present in the github (after clicking into new runner)
+    Name of the runner shoukd be : self-hosted
 
 
 # 7. Setup github secrets:
